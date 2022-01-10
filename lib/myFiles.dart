@@ -6,6 +6,7 @@ class CloudStorageInfo {
   final String? svgSrc, title, totalStorage;
   final int? numOfFiles, percentage;
   final Color? color;
+  final String value;
 
   CloudStorageInfo({
     this.svgSrc,
@@ -14,6 +15,7 @@ class CloudStorageInfo {
     this.numOfFiles,
     this.percentage,
     this.color,
+    required this.value,
   });
 }
 
@@ -25,6 +27,7 @@ List demoMyFiles = [
     totalStorage: " ",
     color: primaryColor,
     percentage: 100,
+    value: "total",
   ),
   CloudStorageInfo(
     title: "Pending Complaints",
@@ -33,6 +36,7 @@ List demoMyFiles = [
     totalStorage: "",
     color: Color(0xFFFFA113),
     percentage: 35,
+    value: "pending",
   ),
   CloudStorageInfo(
     title: "In progress Complaints",
@@ -41,6 +45,7 @@ List demoMyFiles = [
     totalStorage: "",
     color: Colors.cyan,
     percentage: 60,
+    value: "inprogress",
   ),
   CloudStorageInfo(
     title: "Completed Compliants",
@@ -49,5 +54,6 @@ List demoMyFiles = [
     totalStorage: "",
     color: Colors.green,
     percentage: 8,
+    value: "complete",
   ),
 ];

@@ -1,3 +1,6 @@
+import 'package:final_project_01/completed_complaints.dart';
+import 'package:final_project_01/pending_complaints.dart';
+import 'package:final_project_01/total_complaints.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -23,8 +26,22 @@ class FileInfoCard extends StatelessWidget {
       ),
       child: InkWell(
         onTap: () {
-          Navigator.of(context).push(
-              MaterialPageRoute(builder: (context) => InprogressScreen()));
+          if (info.value == "inprogress") {
+            Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => InprogressScreen()));
+          } else if (info.value == "total") {
+            Navigator.of(context)
+                .push(MaterialPageRoute(builder: (context) => TotalScreen()));
+          } else if (info.value == "pending") {
+            Navigator.of(context)
+                .push(MaterialPageRoute(builder: (context) => PendingScreen()));
+          } else if (info.value == "complete") {
+            Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => CompletedScreen()));
+          } else {
+            //do nothing
+            print("no action");
+          }
         },
         // onTap: () async {
         //   Navigator.pop(context);

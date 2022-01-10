@@ -40,6 +40,30 @@ class SideMenu extends StatelessWidget {
             press: () {},
           ),
           DrawerListTile(
+            title: "Workers",
+            svgSrc: "assets/icons/menu_profile.svg",
+            press: () {
+              print("hello");
+              // Expanded(
+              //   child: DrawerListTile(
+              //     title: "Shahbaz",
+              //     svgSrc: "assets/icons/menu/menu_store.svg",
+              //     press: () {},
+              //   ),
+              // );
+              // DropdownButton<String>(
+              //   items: <String>['Shahbaz', 'Mubashir', 'murtaza', 'shahbaz']
+              //       .map((String value) {
+              //     return DropdownMenuItem<String>(
+              //       value: value,
+              //       child: Text(value),
+              //     );
+              //   }).toList(),
+              //   onChanged: (_) {},
+              // );
+            },
+          ),
+          DrawerListTile(
             title: "Notification",
             svgSrc: "assets/icons/menu_notification.svg",
             press: () {},

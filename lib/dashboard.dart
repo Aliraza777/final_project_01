@@ -5,6 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../../constants.dart';
 import 'my_files.dart';
 import 'recent_files.dart';
+import 'storage_detail.dart';
 
 class DashboardScreen extends StatelessWidget {
   @override
@@ -28,18 +29,18 @@ class DashboardScreen extends StatelessWidget {
                       MyFiles(),
                       if (Responsive.isMobile(context))
                         SizedBox(height: defaultPadding),
-                      // if (Responsive.isMobile(context)) StarageDetails(),
+                      if (Responsive.isMobile(context)) StorageDetails(),
                     ],
                   ),
                 ),
                 if (!Responsive.isMobile(context))
                   SizedBox(width: defaultPadding),
                 // On Mobile means if the screen is less than 850 we dont want to show it
-                // if (!Responsive.isMobile(context))
-                // Expanded(
-                //   flex: 2,
-                //   // child: StarageDetails(),
-                // ),
+                if (!Responsive.isMobile(context))
+                  Expanded(
+                    flex: 2,
+                    child: StorageDetails(),
+                  ),
               ],
             )
           ],
@@ -64,7 +65,8 @@ class Header extends StatelessWidget {
           IconButton(
             icon: Icon(Icons.menu),
             // onPressed: context.read<MenuController>().controlMenu,
-            onPressed: () {},
+
+            onPressed: () => Scaffold.of(context).openDrawer(),
           ),
         if (!Responsive.isMobile(context))
           Text(
@@ -75,9 +77,6 @@ class Header extends StatelessWidget {
           Spacer(flex: Responsive.isDesktop(context) ? 2 : 1),
         Expanded(child: SearchField()),
         ProfileCard(),
-        // Navigator.of(context).push(
-        // MaterialPageRoute(builder: (context) => Inprogress()),
-        // );
       ],
     );
   }
