@@ -32,7 +32,7 @@ class List_Tile extends StatelessWidget {
                 .push(MaterialPageRoute(builder: (context) => ReportScreen()));
           },
           child: ListTile(
-            tileColor: Colors.blueGrey,
+            tileColor: Colors.grey[800],
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(8.0))),
             contentPadding: EdgeInsets.symmetric(horizontal: 0.0),

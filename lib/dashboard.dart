@@ -63,7 +63,10 @@ class Header extends StatelessWidget {
       children: [
         if (!Responsive.isDesktop(context))
           IconButton(
-            icon: Icon(Icons.menu),
+            icon: Icon(
+              Icons.menu,
+              color: secondaryColor,
+            ),
             // onPressed: context.read<MenuController>().controlMenu,
 
             onPressed: () => Scaffold.of(context).openDrawer(),
