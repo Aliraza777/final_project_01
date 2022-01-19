@@ -138,36 +138,33 @@ class Total extends StatelessWidget {
       // key: context.read<MenuController>().scaffoldKey,
       padding: EdgeInsets.all(defaultPadding),
       decoration: BoxDecoration(
-        color: secondaryColor,
+        color: bgColor,
         borderRadius: const BorderRadius.all(Radius.circular(10)),
       ),
-      child: Padding(
-        padding: const EdgeInsets.only(top: 16.0, right: 8.0),
-        child: SingleChildScrollView(
-          padding: EdgeInsets.all(defaultPadding),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Header(),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(
-                  "Total compliants",
-                  style: Theme.of(context).textTheme.subtitle1,
+      child: SingleChildScrollView(
+        // padding: EdgeInsets.all(defaultPadding),
+        child: Column(
+          // crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Header(),
+            Text(
+              "Total compliants",
+              // style: Theme.of(context).textTheme.subtitle1,
+              style: TextStyle(
+                color: secondaryColor,
+              ),
+            ),
+            SingleChildScrollView(
+              scrollDirection: Axis.vertical,
+              child: Container(
+                height: 600,
+                child: ListView(
+                  //The list view for complaints.
+                  children: [...WidgetTilesList],
                 ),
               ),
-              SingleChildScrollView(
-                scrollDirection: Axis.vertical,
-                child: Container(
-                  height: 600,
-                  child: ListView(
-                    //The list view for complaints.
-                    children: [...WidgetTilesList],
-                  ),
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

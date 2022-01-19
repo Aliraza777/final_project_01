@@ -1,6 +1,5 @@
 import 'package:final_project_01/responsive.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../constants.dart';
 import 'my_files.dart';
@@ -60,17 +59,20 @@ class Header extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      // mainAxisAlignment: MainAxisAlignment.center,
+      // crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        if (!Responsive.isDesktop(context))
-          IconButton(
-            icon: Icon(
-              Icons.menu,
-              color: secondaryColor,
-            ),
-            // onPressed: context.read<MenuController>().controlMenu,
-
-            onPressed: () => Scaffold.of(context).openDrawer(),
+        // if (!Responsive.isDesktop(context))
+        //   Spacer(flex: Responsive.isMobile(context) ? 1 : 2),
+        IconButton(
+          icon: Icon(
+            Icons.menu,
+            color: primaryColor,
           ),
+          // onPressed: context.read<MenuController>().controlMenu,
+
+          onPressed: () => Scaffold.of(context).openDrawer(),
+        ),
         if (!Responsive.isMobile(context))
           Text(
             "Dashboard",
@@ -78,7 +80,10 @@ class Header extends StatelessWidget {
           ),
         if (!Responsive.isMobile(context))
           Spacer(flex: Responsive.isDesktop(context) ? 2 : 1),
-        Expanded(child: SearchField()),
+        // Expanded(child: SearchField()),
+        SizedBox(
+          width: 200,
+        ),
         ProfileCard(),
       ],
     );
@@ -99,7 +104,7 @@ class ProfileCard extends StatelessWidget {
         vertical: defaultPadding / 2,
       ),
       decoration: BoxDecoration(
-        color: secondaryColor,
+        color: primaryColor,
         borderRadius: const BorderRadius.all(Radius.circular(10)),
         border: Border.all(color: Colors.white10),
       ),
@@ -112,42 +117,41 @@ class ProfileCard extends StatelessWidget {
                   const EdgeInsets.symmetric(horizontal: defaultPadding / 2),
               child: Text("Muhammad Ali Raza"),
             ),
-          Icon(Icons.keyboard_arrow_down),
         ],
       ),
     );
   }
 }
-
-class SearchField extends StatelessWidget {
-  const SearchField({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return TextField(
-      decoration: InputDecoration(
-        hintText: "Search",
-        fillColor: secondaryColor,
-        filled: true,
-        border: OutlineInputBorder(
-          borderSide: BorderSide.none,
-          borderRadius: const BorderRadius.all(Radius.circular(10)),
-        ),
-        suffixIcon: InkWell(
-          onTap: () {},
-          child: Container(
-            padding: EdgeInsets.all(defaultPadding * 0.75),
-            margin: EdgeInsets.symmetric(horizontal: defaultPadding / 2),
-            decoration: BoxDecoration(
-              color: primaryColor,
-              borderRadius: const BorderRadius.all(Radius.circular(10)),
-            ),
-            child: SvgPicture.asset("assets/icons/Search.svg"),
-          ),
-        ),
-      ),
-    );
-  }
-}
+//
+// class SearchField extends StatelessWidget {
+//   const SearchField({
+//     Key? key,
+//   }) : super(key: key);
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return TextField(
+//       decoration: InputDecoration(
+//         hintText: "Search",
+//         fillColor: primaryColor,
+//         filled: true,
+//         border: OutlineInputBorder(
+//           borderSide: BorderSide.none,
+//           borderRadius: const BorderRadius.all(Radius.circular(10)),
+//         ),
+//         suffixIcon: InkWell(
+//           onTap: () {},
+//           child: Container(
+//             padding: EdgeInsets.all(defaultPadding * 0.75),
+//             margin: EdgeInsets.symmetric(horizontal: defaultPadding / 2),
+//             decoration: BoxDecoration(
+//               color: primaryColor,
+//               borderRadius: const BorderRadius.all(Radius.circular(10)),
+//             ),
+//             child: SvgPicture.asset("assets/icons/Search.svg"),
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }

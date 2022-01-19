@@ -26,15 +26,16 @@ class List_Tile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Card(
+        color: Colors.blue[300],
         child: InkWell(
           onTap: () {
             Navigator.of(context)
                 .push(MaterialPageRoute(builder: (context) => ReportScreen()));
           },
           child: ListTile(
-            tileColor: Colors.grey[800],
+            tileColor: Colors.blue[300],
             shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.all(Radius.circular(8.0))),
+                borderRadius: BorderRadius.all(Radius.circular(16.0))),
             contentPadding: EdgeInsets.symmetric(horizontal: 0.0),
             title: Center(child: Text(title)),
             subtitle: Column(

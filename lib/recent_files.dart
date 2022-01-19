@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
 import '../../../constants.dart';
-import '../../../responsive.dart';
 import 'list_tile_card.dart';
 
 class RecentFiles extends StatelessWidget {
@@ -89,7 +88,7 @@ class RecentFiles extends StatelessWidget {
     return Container(
       padding: EdgeInsets.all(defaultPadding),
       decoration: BoxDecoration(
-        color: secondaryColor,
+        color: Colors.blue[100],
         borderRadius: const BorderRadius.all(Radius.circular(10)),
       ),
       child: Column(
@@ -98,63 +97,66 @@ class RecentFiles extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Center(
-                child: Stack(
-                  alignment: AlignmentDirectional.topEnd,
-                  children: [
-                    Container(
-                      padding: EdgeInsets.all(12.0),
-                      child: ElevatedButton(
-                        style: TextButton.styleFrom(
-                          padding: EdgeInsets.symmetric(
-                            horizontal: defaultPadding * 1.5,
-                            vertical: defaultPadding /
-                                (Responsive.isMobile(context) ? 2 : 1),
-                          ),
-                        ),
-                        onPressed: () {},
-                        child: Text("New"),
-                      ),
-                    ),
-                    Icon(
-                      Icons.new_releases_outlined,
-                      size: 20,
-                      color: Colors.yellow,
-                    ),
-                  ],
-                ),
-              ),
-              Center(
-                child: Stack(
-                  alignment: AlignmentDirectional.topEnd,
-                  children: [
-                    Container(
-                      padding: EdgeInsets.all(12.0),
-                      child: ElevatedButton(
-                        style: TextButton.styleFrom(
-                          padding: EdgeInsets.symmetric(
-                            horizontal: defaultPadding * 1.5,
-                            vertical: defaultPadding /
-                                (Responsive.isMobile(context) ? 2 : 1),
-                          ),
-                        ),
-                        onPressed: () {},
-                        child: Text("Updated"),
-                      ),
-                    ),
-                    Icon(
-                      Icons.info_outline,
-                      size: 20,
-                      color: Colors.yellow,
-                    ),
-                  ],
-                ),
-              ),
+              // Center(
+              //   child: Stack(
+              //     alignment: AlignmentDirectional.topEnd,
+              //     children: [
+              //       Container(
+              //         padding: EdgeInsets.all(12.0),
+              //         child: ElevatedButton(
+              //           style: TextButton.styleFrom(
+              //             padding: EdgeInsets.symmetric(
+              //               horizontal: defaultPadding * 1.5,
+              //               vertical: defaultPadding /
+              //                   (Responsive.isMobile(context) ? 2 : 1),
+              //             ),
+              //           ),
+              //           onPressed: () {},
+              //           child: Text("New"),
+              //         ),
+              //       ),
+              //       Icon(
+              //         Icons.new_releases_outlined,
+              //         size: 20,
+              //         color: Colors.yellow,
+              //       ),
+              //     ],
+              //   ),
+              // ),
+              // Center(
+              //   child: Stack(
+              //     alignment: AlignmentDirectional.topEnd,
+              //     children: [
+              //       Container(
+              //         padding: EdgeInsets.all(12.0),
+              //         child: ElevatedButton(
+              //           style: TextButton.styleFrom(
+              //             padding: EdgeInsets.symmetric(
+              //               horizontal: defaultPadding * 1.5,
+              //               vertical: defaultPadding /
+              //                   (Responsive.isMobile(context) ? 2 : 1),
+              //             ),
+              //           ),
+              //           onPressed: () {},
+              //           child: Text("Updated"),
+              //         ),
+              //       ),
+              //       Icon(
+              //         Icons.info_outline,
+              //         size: 20,
+              //         color: Colors.yellow,
+              //       ),
+              //     ],
+              //   ),
+              // ),
             ],
           ),
           Text(
             "Recent Files",
-            style: Theme.of(context).textTheme.subtitle1,
+            // style: Theme.of(context).textTheme.subtitle1,
+            style: TextStyle(
+              color: secondaryColor,
+            ),
           ),
           SingleChildScrollView(
             scrollDirection: Axis.vertical,
@@ -162,7 +164,6 @@ class RecentFiles extends StatelessWidget {
               height: 300,
               child: ListView(
                 //The list view for complaints.
-
                 children: [...WidgetTilesList],
               ),
             ),
@@ -171,7 +172,10 @@ class RecentFiles extends StatelessWidget {
             onTap: () {},
             child: Text(
               "More Files",
-              style: Theme.of(context).textTheme.subtitle1,
+              // style: Theme.of(context).textTheme.subtitle1,
+              style: TextStyle(
+                color: secondaryColor,
+              ),
               // textAlign: AlignmentDirectional.bottomEnd,
             ),
           ),

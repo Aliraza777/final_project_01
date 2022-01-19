@@ -20,7 +20,10 @@ class MyFiles extends StatelessWidget {
           children: [
             Text(
               "Complaints Detail",
-              style: Theme.of(context).textTheme.subtitle1,
+              // style: Theme.of(context).textTheme.subtitle1,
+              style: TextStyle(
+                color: secondaryColor,
+              ),
             ),
             ElevatedButton.icon(
               style: TextButton.styleFrom(
