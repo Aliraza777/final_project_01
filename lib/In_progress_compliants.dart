@@ -1,4 +1,3 @@
-import 'package:final_project_01/dashboard.dart';
 import 'package:final_project_01/sideMenu.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -116,37 +115,54 @@ class Inprogress extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      // key: context.read<MenuController>().scaffoldKey,
-      padding: EdgeInsets.all(defaultPadding),
-      decoration: BoxDecoration(
-        color: bgColor,
-        borderRadius: const BorderRadius.all(Radius.circular(10)),
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.blue,
+        leading: IconButton(
+          icon: Icon(
+            Icons.menu,
+            color: Colors.blueGrey.shade600,
+          ),
+          onPressed: () => Scaffold.of(context).openDrawer(),
+        ),
       ),
-      child: SingleChildScrollView(
-        // padding: EdgeInsets.all(defaultPadding),
-        child: Column(
-          // crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Header(),
-            Text(
-              "In progress compliants",
-              // style: Theme.of(context).textTheme.subtitle1,
-              style: TextStyle(
-                color: secondaryColor,
+      body: Container(
+        decoration: BoxDecoration(
+          color: bgColor,
+          borderRadius: const BorderRadius.all(Radius.circular(10)),
+        ),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              SizedBox(
+                height: 20,
               ),
-            ),
-            SingleChildScrollView(
-              scrollDirection: Axis.vertical,
-              child: Container(
-                height: 600,
-                child: ListView(
-                  //The list view for complaints.
-                  children: [...WidgetTilesList],
+              Text(
+                "In progress compliants",
+                // style: Theme.of(context).textTheme.subtitle1,
+                style: TextStyle(
+                  fontSize: 20,
+                  color: secondaryColor,
                 ),
               ),
-            ),
-          ],
+              SizedBox(
+                height: 28,
+              ),
+              SingleChildScrollView(
+                scrollDirection: Axis.vertical,
+                child: Container(
+                  height: 600,
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 16.0, right: 16.0),
+                    child: ListView(
+                      //The list view for complaints.
+                      children: [...WidgetTilesList],
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
