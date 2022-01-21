@@ -20,7 +20,7 @@ class StorageDetails extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "Complaint Breakdown",
+            "Complaints Summary",
             style: TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.w500,

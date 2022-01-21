@@ -43,14 +43,6 @@ class FileInfoCard extends StatelessWidget {
             print("no action");
           }
         },
-        // onTap: () async {
-        //   Navigator.pop(context);
-        //   await Navigator.of(context).push(
-        //     MaterialPageRoute(builder: (context) => InprogressScreen()),
-        //   );
-        //   print('on tap activated');
-        // },
-
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

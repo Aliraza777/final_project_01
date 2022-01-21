@@ -28,7 +28,6 @@ class DashboardScreen extends StatelessWidget {
           padding: EdgeInsets.all(defaultPadding),
           child: Column(
             children: [
-              // Header(),
               SizedBox(height: defaultPadding),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -64,79 +63,79 @@ class DashboardScreen extends StatelessWidget {
   }
 }
 
-//////////////////////////// header code...............
-
-class Header extends StatelessWidget {
-  const Header({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      // mainAxisAlignment: MainAxisAlignment.center,
-      // crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        // if (!Responsive.isDesktop(context))
-        //   Spacer(flex: Responsive.isMobile(context) ? 1 : 2),
-        IconButton(
-          icon: Icon(
-            Icons.menu,
-            color: primaryColor,
-          ),
-          // onPressed: context.read<MenuController>().controlMenu,
-
-          onPressed: () => Scaffold.of(context).openDrawer(),
-        ),
-        if (!Responsive.isMobile(context))
-          Text(
-            "Dashboard",
-            style: Theme.of(context).textTheme.headline6,
-          ),
-        if (!Responsive.isMobile(context))
-          Spacer(flex: Responsive.isDesktop(context) ? 2 : 1),
-        // Expanded(child: SearchField()),
-        SizedBox(
-          width: 200,
-        ),
-        ProfileCard(),
-      ],
-    );
-  }
-}
-
-class ProfileCard extends StatelessWidget {
-  const ProfileCard({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.only(left: defaultPadding),
-      padding: EdgeInsets.symmetric(
-        horizontal: defaultPadding,
-        vertical: defaultPadding / 2,
-      ),
-      decoration: BoxDecoration(
-        color: primaryColor,
-        borderRadius: const BorderRadius.all(Radius.circular(10)),
-        border: Border.all(color: Colors.white10),
-      ),
-      child: Row(
-        children: [
-          Icon(Icons.supervised_user_circle_outlined),
-          if (!Responsive.isMobile(context))
-            Padding(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: defaultPadding / 2),
-              child: Text("Muhammad Ali Raza"),
-            ),
-        ],
-      ),
-    );
-  }
-}
+// //////////////////////////// header code...............
+//
+// class Header extends StatelessWidget {
+//   const Header({
+//     Key? key,
+//   }) : super(key: key);
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return Row(
+//       // mainAxisAlignment: MainAxisAlignment.center,
+//       // crossAxisAlignment: CrossAxisAlignment.start,
+//       children: [
+//         // if (!Responsive.isDesktop(context))
+//         //   Spacer(flex: Responsive.isMobile(context) ? 1 : 2),
+//         IconButton(
+//           icon: Icon(
+//             Icons.menu,
+//             color: primaryColor,
+//           ),
+//           // onPressed: context.read<MenuController>().controlMenu,
+//
+//           onPressed: () => Scaffold.of(context).openDrawer(),
+//         ),
+//         if (!Responsive.isMobile(context))
+//           Text(
+//             "Dashboard",
+//             style: Theme.of(context).textTheme.headline6,
+//           ),
+//         if (!Responsive.isMobile(context))
+//           Spacer(flex: Responsive.isDesktop(context) ? 2 : 1),
+//         // Expanded(child: SearchField()),
+//         SizedBox(
+//           width: 200,
+//         ),
+//         ProfileCard(),
+//       ],
+//     );
+//   }
+// }
+//
+// class ProfileCard extends StatelessWidget {
+//   const ProfileCard({
+//     Key? key,
+//   }) : super(key: key);
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return Container(
+//       margin: EdgeInsets.only(left: defaultPadding),
+//       padding: EdgeInsets.symmetric(
+//         horizontal: defaultPadding,
+//         vertical: defaultPadding / 2,
+//       ),
+//       decoration: BoxDecoration(
+//         color: primaryColor,
+//         borderRadius: const BorderRadius.all(Radius.circular(10)),
+//         border: Border.all(color: Colors.white10),
+//       ),
+//       child: Row(
+//         children: [
+//           Icon(Icons.supervised_user_circle_outlined),
+//           if (!Responsive.isMobile(context))
+//             Padding(
+//               padding:
+//                   const EdgeInsets.symmetric(horizontal: defaultPadding / 2),
+//               child: Text("Muhammad Ali Raza"),
+//             ),
+//         ],
+//       ),
+//     );
+//   }
+// }
 //
 // class SearchField extends StatelessWidget {
 //   const SearchField({
