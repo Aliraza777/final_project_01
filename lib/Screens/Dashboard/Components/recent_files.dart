@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
-import '../../../constants.dart';
-import 'list_tile_card.dart';
+import '../../../Components/list_tile_card.dart';
+import '../../../Constants/constants.dart';
 
 class RecentFiles extends StatelessWidget {
   RecentFiles({

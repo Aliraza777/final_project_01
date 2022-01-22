@@ -1,12 +1,12 @@
-import 'package:final_project_01/completed_complaints.dart';
-import 'package:final_project_01/pending_complaints.dart';
-import 'package:final_project_01/total_complaints.dart';
+import 'package:final_project_01/Components/myFiles.dart';
+import 'package:final_project_01/Screens/Complain_Screens/completed_complaints.dart';
+import 'package:final_project_01/Screens/Complain_Screens/pending_complaints.dart';
+import 'package:final_project_01/Screens/Complain_Screens/total_complaints.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../../constants.dart';
-import 'In_progress_compliants.dart';
-import 'myFiles.dart';
+import '../Constants/constants.dart';
+import '../Screens/Complain_Screens//In_progress_compliants.dart';
 
 class FileInfoCard extends StatelessWidget {
   const FileInfoCard({

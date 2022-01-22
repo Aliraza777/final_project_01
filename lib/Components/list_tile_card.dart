@@ -1,4 +1,3 @@
-import 'package:final_project_01/report.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
@@ -29,8 +28,8 @@ class List_Tile extends StatelessWidget {
         color: Colors.blue[300],
         child: InkWell(
           onTap: () {
-            Navigator.of(context)
-                .push(MaterialPageRoute(builder: (context) => ReportScreen()));
+            // Navigator.of(context)
+            //     .push(MaterialPageRoute(builder: (context) => ReportScreen()));
           },
           child: ListTile(
             tileColor: Colors.blue[300],

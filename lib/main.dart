@@ -1,8 +1,8 @@
-import 'package:final_project_01/mainScreen.dart';
+import 'package:final_project_01/Screens/MainScreen/mainScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'constants.dart';
+import 'Constants/constants.dart';
 
 void main() {
   runApp(MyApp());

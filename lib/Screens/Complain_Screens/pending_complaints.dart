@@ -1,10 +1,10 @@
-import 'package:final_project_01/sideMenu.dart';
+import 'package:final_project_01/Screens/MainScreen/Components/sideMenu.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
-import '../../../constants.dart';
-import '../responsive.dart';
-import 'list_tile_card.dart';
+import '../../Components/list_tile_card.dart';
+import '../../Constants/constants.dart';
+import '../../Responsive/responsive.dart';
 
 class Pending extends StatelessWidget {
   Pending({

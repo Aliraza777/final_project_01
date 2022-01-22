@@ -1,6 +1,6 @@
-import 'package:final_project_01/dashboard.dart';
-import 'package:final_project_01/responsive.dart';
-import 'package:final_project_01/sideMenu.dart';
+import 'package:final_project_01/Responsive/responsive.dart';
+import 'package:final_project_01/Screens/Dashboard/dashboard.dart';
+import 'package:final_project_01/Screens/MainScreen/Components/sideMenu.dart';
 import 'package:flutter/material.dart';
 
 class MainScreen extends StatelessWidget {

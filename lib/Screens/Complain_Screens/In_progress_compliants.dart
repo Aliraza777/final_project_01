@@ -1,35 +1,17 @@
-import 'package:final_project_01/sideMenu.dart';
+import 'package:final_project_01/Screens/MainScreen/Components/sideMenu.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
-import '../../../constants.dart';
-import '../responsive.dart';
-import 'list_tile_card.dart';
+import '../../Components/list_tile_card.dart';
+import '../../Constants/constants.dart';
+import '../../Responsive/responsive.dart';
 
-class Total extends StatelessWidget {
-  Total({
+class Inprogress extends StatelessWidget {
+  Inprogress({
     Key? key,
   }) : super(key: key);
 
   final List<List_Tile> WidgetTilesList = [
-    List_Tile(
-      title: "Title 3 ",
-      addr: "Dorm-D-7",
-      name: "Mahnoor Awan",
-      status: "Completed",
-      assign: "Haroon",
-      service: "plumber",
-      priority: "Low",
-    ),
-    List_Tile(
-      title: "Title 2 ",
-      addr: "Dorm-G-102",
-      name: "Muhammad Ali Raza",
-      status: "InProgress",
-      assign: "Haris",
-      service: "plumber",
-      priority: "normal",
-    ),
     List_Tile(
       title: "Title 1 ",
       addr: "Dorm-F-12",
@@ -156,7 +138,7 @@ class Total extends StatelessWidget {
                 height: 20,
               ),
               Text(
-                "Total compliants",
+                "In progress compliants",
                 // style: Theme.of(context).textTheme.subtitle1,
                 style: TextStyle(
                   fontSize: 20,
@@ -187,7 +169,7 @@ class Total extends StatelessWidget {
   }
 }
 
-class TotalScreen extends StatelessWidget {
+class InprogressScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -207,7 +189,7 @@ class TotalScreen extends StatelessWidget {
             Expanded(
               // It takes 5/6 part of the screen
               flex: 5,
-              child: Total(),
+              child: Inprogress(),
             ),
           ],
         ),

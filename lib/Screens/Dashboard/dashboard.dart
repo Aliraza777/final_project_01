@@ -1,10 +1,10 @@
-import 'package:final_project_01/responsive.dart';
+import 'package:final_project_01/Responsive/responsive.dart';
 import 'package:flutter/material.dart';
 
-import '../../constants.dart';
-import 'my_files.dart';
-import 'recent_files.dart';
-import 'storage_detail.dart';
+import '../../Constants/constants.dart';
+import 'Components/my_files.dart';
+import 'Components/recent_files.dart';
+import 'Components/storage_detail.dart';
 
 class DashboardScreen extends StatelessWidget {
   @override
