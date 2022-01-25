@@ -1,10 +1,9 @@
+import 'package:final_project_01/Components/list_tile_card.dart';
+import 'package:final_project_01/Constants/constants.dart';
+import 'package:final_project_01/Responsive/responsive.dart';
 import 'package:final_project_01/Screens/MainScreen/Components/sideMenu.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-
-import '../../Components/list_tile_card.dart';
-import '../../Constants/constants.dart';
-import '../../Responsive/responsive.dart';
 
 class Total extends StatelessWidget {
   Total({

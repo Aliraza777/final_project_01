@@ -1,9 +1,9 @@
+import 'package:final_project_01/Components/file_info_card.dart';
+import 'package:final_project_01/Components/myFiles.dart';
+import 'package:final_project_01/Constants/constants.dart';
+import 'package:final_project_01/Responsive/responsive.dart';
+import 'package:final_project_01/Screens/Add_Complain_Screen/add_Complain.dart';
 import 'package:flutter/material.dart';
-
-import '../../../Components/file_info_card.dart';
-import '../../../Components/myFiles.dart';
-import '../../../Constants/constants.dart';
-import '../../../Responsive/responsive.dart';
 
 class MyFiles extends StatelessWidget {
   const MyFiles({
@@ -28,14 +28,17 @@ class MyFiles extends StatelessWidget {
             ElevatedButton.icon(
               style: TextButton.styleFrom(
                 padding: EdgeInsets.symmetric(
-                  horizontal: defaultPadding * 1.5,
+                  horizontal: defaultPadding,
                   vertical:
                       defaultPadding / (Responsive.isMobile(context) ? 2 : 1),
                 ),
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (_) => AddComplain()));
+              },
               icon: Icon(Icons.add),
-              label: Text("Add New"),
+              label: Text("Add Complain"),
             ),
           ],
         ),

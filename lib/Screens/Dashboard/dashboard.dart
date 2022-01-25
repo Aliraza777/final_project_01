@@ -1,7 +1,7 @@
+import 'package:final_project_01/Constants/constants.dart';
 import 'package:final_project_01/Responsive/responsive.dart';
 import 'package:flutter/material.dart';
 
-import '../../Constants/constants.dart';
 import 'Components/my_files.dart';
 import 'Components/recent_files.dart';
 import 'Components/storage_detail.dart';
@@ -15,7 +15,7 @@ class DashboardScreen extends StatelessWidget {
         leading: IconButton(
           icon: Icon(
             Icons.menu,
-            color: Colors.blueGrey.shade600,
+            color: Colors.white,
           ),
           // onPressed: context.read<MenuController>().controlMenu,
 
@@ -36,9 +36,9 @@ class DashboardScreen extends StatelessWidget {
                     flex: 5,
                     child: Column(
                       children: [
-                        RecentFiles(),
-                        SizedBox(height: defaultPadding),
                         MyFiles(),
+                        SizedBox(height: defaultPadding),
+                        RecentFiles(),
                         if (Responsive.isMobile(context))
                           SizedBox(height: defaultPadding),
                         if (Responsive.isMobile(context)) StorageDetails(),
