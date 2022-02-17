@@ -17,8 +17,6 @@ class DashboardScreen extends StatelessWidget {
             Icons.menu,
             color: Colors.white,
           ),
-          // onPressed: context.read<MenuController>().controlMenu,
-
           onPressed: () => Scaffold.of(context).openDrawer(),
         ),
         title: Text("NAMHAL"),
