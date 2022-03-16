@@ -1,12 +1,8 @@
 import 'package:final_project_01/Components/myFiles.dart';
-import 'package:final_project_01/Screens/Complain_Screens/completed_complaints.dart';
-import 'package:final_project_01/Screens/Complain_Screens/pending_complaints.dart';
-import 'package:final_project_01/Screens/Complain_Screens/total_complaints.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../Constants/constants.dart';
-import '../Screens/Complain_Screens//In_progress_compliants.dart';
 
 class FileInfoCard extends StatelessWidget {
   const FileInfoCard({
@@ -26,22 +22,22 @@ class FileInfoCard extends StatelessWidget {
       ),
       child: InkWell(
         onTap: () {
-          if (info.value == "inprogress") {
-            Navigator.of(context).push(
-                MaterialPageRoute(builder: (context) => InprogressScreen()));
-          } else if (info.value == "total") {
-            Navigator.of(context)
-                .push(MaterialPageRoute(builder: (context) => TotalScreen()));
-          } else if (info.value == "pending") {
-            Navigator.of(context)
-                .push(MaterialPageRoute(builder: (context) => PendingScreen()));
-          } else if (info.value == "complete") {
-            Navigator.of(context).push(
-                MaterialPageRoute(builder: (context) => CompletedScreen()));
-          } else {
-            //do nothing
-            print("no action");
-          }
+          //   if (info.value == "inprogress") {
+          //     Navigator.of(context).push(
+          //         MaterialPageRoute(builder: (context) => InprogressScreen()));
+          //   } else if (info.value == "total") {
+          //     Navigator.of(context)
+          //         .push(MaterialPageRoute(builder: (context) => TotalScreen()));
+          //   } else if (info.value == "pending") {
+          //     Navigator.of(context)
+          //         .push(MaterialPageRoute(builder: (context) => PendingScreen()));
+          //   } else if (info.value == "complete") {
+          //     Navigator.of(context).push(
+          //         MaterialPageRoute(builder: (context) => CompletedScreen()));
+          //   } else {
+          //     //do nothing
+          //     print("no action");
+          //   }
         },
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

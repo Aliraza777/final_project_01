@@ -1,7 +1,7 @@
+import 'package:final_project_01/Screens/MainScreen/mainScreen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 import 'Constants/constants.dart';
 
 Future<void> main() async {
