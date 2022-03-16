@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "19766902325",
-    "project_id": "namhal-fyp",
-    "storage_bucket": "namhal-fyp.appspot.com"
+    "project_number": "1032823516212",
+    "project_id": "fyp-datainfo",
+    "storage_bucket": "fyp-datainfo.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:19766902325:android:867430b7bd62c3e5e4bb7c",
+        "mobilesdk_app_id": "1:1032823516212:android:a1d2f4b83dd15d6c49ee61",
         "android_client_info": {
           "package_name": "com.example.final_project_01"
         }
       },
       "oauth_client": [
         {
-          "client_id": "19766902325-hg42pv4rcvotqamkiuq0c57qf2mag38g.apps.googleusercontent.com",
+          "client_id": "1032823516212-6mjga1temhp9u2eh0e5umdumeuuum2mh.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCFsXlTPOiQCwSLlUnf1_xc3H_rpdkijQk"
+          "current_key": "AIzaSyDPkMWS2Pows_BBYRw1V_KGF4Ph-v6MViw"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "19766902325-hg42pv4rcvotqamkiuq0c57qf2mag38g.apps.googleusercontent.com",
+              "client_id": "1032823516212-6mjga1temhp9u2eh0e5umdumeuuum2mh.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
