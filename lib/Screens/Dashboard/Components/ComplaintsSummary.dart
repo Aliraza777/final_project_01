@@ -1,11 +1,11 @@
-import 'package:final_project_01/Components/storage_info_card.dart';
+import 'package:final_project_01/Components/complaints_summary_card.dart';
 import 'package:flutter/material.dart';
 
 import '../../../Constants/constants.dart';
 import 'chart.dart';
 
-class StorageDetails extends StatelessWidget {
-  const StorageDetails({
+class ComplaintsSummary extends StatelessWidget {
+  const ComplaintsSummary({
     Key? key,
   }) : super(key: key);
 
@@ -30,25 +30,25 @@ class StorageDetails extends StatelessWidget {
           ),
           SizedBox(height: defaultPadding),
           Chart(),
-          StorageInfoCard(
+          ComplaintsSummaryCard(
             svgSrc: "assets/icons/Documents.svg",
             title: "Total Complaints",
             color: primaryColor,
             numOfFiles: 114,
           ),
-          StorageInfoCard(
+          ComplaintsSummaryCard(
             svgSrc: "assets/icons/Documents.svg",
             title: "In progress Complaints",
             color: Colors.cyan,
             numOfFiles: 78,
           ),
-          StorageInfoCard(
+          ComplaintsSummaryCard(
             svgSrc: "assets/icons/Documents.svg",
             title: "Pending Complaints",
             color: Color(0xFFFFA113),
             numOfFiles: 28,
           ),
-          StorageInfoCard(
+          ComplaintsSummaryCard(
             svgSrc: "assets/icons/Documents.svg",
             title: "Completed Complaints",
             color: Colors.green,

@@ -70,3 +70,76 @@ class List_Tile extends StatelessWidget {
     );
   }
 }
+
+final List<List_Tile> WidgetTilesList = [
+  List_Tile(
+    title: "Title 1 ",
+    addr: "Dorm-F-12",
+    name: "Zia ur Rehman",
+    status: "InComplete",
+    assign: "mujtaba",
+    service: "plumber",
+    priority: "Low",
+    // tag: "updated",
+  ),
+  List_Tile(
+    title: "Title 1 ",
+    addr: "Dorm-F-12",
+    name: "Zia ur Rehman",
+    status: "InComplete",
+    assign: "mujtaba",
+    service: "electric",
+    priority: "normal",
+    // tag: "updated"
+  ),
+  List_Tile(
+    title: "Title 1 ",
+    addr: "Dorm-F-12",
+    name: "Zia ur Rehman",
+    status: "InComplete",
+    assign: "mujtaba",
+    service: "plumber",
+    priority: "high",
+    // tag: "updated"
+  ),
+  List_Tile(
+    title: "Title 1 ",
+    addr: "Dorm-F-12",
+    name: "Zia ur Rehman",
+    status: "InComplete",
+    assign: "mujtaba",
+    service: "electric",
+    priority: "Low",
+    // tag: "new"
+  ),
+  List_Tile(
+    title: "Title 1 ",
+    addr: "Dorm-F-12",
+    name: "Zia ur Rehman",
+    status: "InComplete",
+    assign: "mujtaba",
+    service: "plumber",
+    priority: "Low",
+    // tag: "new"
+  ),
+  List_Tile(
+    title: "Title 2 ",
+    addr: "Dorm-G-102",
+    name: "Muhammad Ali Raza",
+    status: "InProgress",
+    assign: "Haris",
+    service: "plumber",
+    priority: "normal",
+    // tag: "new"
+  ),
+  List_Tile(
+    title: "Title 3 ",
+    addr: "Dorm-D-7",
+    name: "Mahnoor Awan",
+    status: "Completed",
+    assign: "Haroon",
+    service: "plumber",
+    priority: "Low",
+    // tag: "new"
+  ),
+];

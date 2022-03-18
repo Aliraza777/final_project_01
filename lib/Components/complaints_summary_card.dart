@@ -3,8 +3,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import '../Constants/constants.dart';
 
-class StorageInfoCard extends StatelessWidget {
-  const StorageInfoCard({
+class ComplaintsSummaryCard extends StatelessWidget {
+  const ComplaintsSummaryCard({
     Key? key,
     required this.title,
     required this.svgSrc,

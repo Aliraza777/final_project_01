@@ -1,10 +1,12 @@
+import 'package:final_project_01/Components/ComplaintsModel.dart';
+import 'package:final_project_01/Components/Complaints_info_card.dart';
 import 'package:final_project_01/Constants/constants.dart';
 import 'package:final_project_01/Responsive/responsive.dart';
+import 'package:final_project_01/Screens/Add_Complain_Screen/add_Complain.dart';
 import 'package:flutter/material.dart';
 
-import 'Components/my_files.dart';
-import 'Components/recent_files.dart';
-import 'Components/storage_detail.dart';
+import 'Components/ComplaintsSummary.dart';
+import 'Components/recent_complaints.dart';
 
 class DashboardScreen extends StatelessWidget {
   @override
@@ -34,12 +36,12 @@ class DashboardScreen extends StatelessWidget {
                     flex: 5,
                     child: Column(
                       children: [
-                        MyFiles(),
+                        ComplaintDetails(),
                         SizedBox(height: defaultPadding),
-                        RecentFiles(),
+                        RecentComplaints(),
                         if (Responsive.isMobile(context))
                           SizedBox(height: defaultPadding),
-                        if (Responsive.isMobile(context)) StorageDetails(),
+                        if (Responsive.isMobile(context)) ComplaintsSummary(),
                       ],
                     ),
                   ),
@@ -49,7 +51,7 @@ class DashboardScreen extends StatelessWidget {
                   if (!Responsive.isMobile(context))
                     Expanded(
                       flex: 2,
-                      child: StorageDetails(),
+                      child: ComplaintsSummary(),
                     ),
                 ],
               )
@@ -61,109 +63,83 @@ class DashboardScreen extends StatelessWidget {
   }
 }
 
-// //////////////////////////// header code...............
-//
-// class Header extends StatelessWidget {
-//   const Header({
-//     Key? key,
-//   }) : super(key: key);
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return Row(
-//       // mainAxisAlignment: MainAxisAlignment.center,
-//       // crossAxisAlignment: CrossAxisAlignment.start,
-//       children: [
-//         // if (!Responsive.isDesktop(context))
-//         //   Spacer(flex: Responsive.isMobile(context) ? 1 : 2),
-//         IconButton(
-//           icon: Icon(
-//             Icons.menu,
-//             color: primaryColor,
-//           ),
-//           // onPressed: context.read<MenuController>().controlMenu,
-//
-//           onPressed: () => Scaffold.of(context).openDrawer(),
-//         ),
-//         if (!Responsive.isMobile(context))
-//           Text(
-//             "Dashboard",
-//             style: Theme.of(context).textTheme.headline6,
-//           ),
-//         if (!Responsive.isMobile(context))
-//           Spacer(flex: Responsive.isDesktop(context) ? 2 : 1),
-//         // Expanded(child: SearchField()),
-//         SizedBox(
-//           width: 200,
-//         ),
-//         ProfileCard(),
-//       ],
-//     );
-//   }
-// }
-//
-// class ProfileCard extends StatelessWidget {
-//   const ProfileCard({
-//     Key? key,
-//   }) : super(key: key);
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container(
-//       margin: EdgeInsets.only(left: defaultPadding),
-//       padding: EdgeInsets.symmetric(
-//         horizontal: defaultPadding,
-//         vertical: defaultPadding / 2,
-//       ),
-//       decoration: BoxDecoration(
-//         color: primaryColor,
-//         borderRadius: const BorderRadius.all(Radius.circular(10)),
-//         border: Border.all(color: Colors.white10),
-//       ),
-//       child: Row(
-//         children: [
-//           Icon(Icons.supervised_user_circle_outlined),
-//           if (!Responsive.isMobile(context))
-//             Padding(
-//               padding:
-//                   const EdgeInsets.symmetric(horizontal: defaultPadding / 2),
-//               child: Text("Muhammad Ali Raza"),
-//             ),
-//         ],
-//       ),
-//     );
-//   }
-// }
-//
-// class SearchField extends StatelessWidget {
-//   const SearchField({
-//     Key? key,
-//   }) : super(key: key);
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return TextField(
-//       decoration: InputDecoration(
-//         hintText: "Search",
-//         fillColor: primaryColor,
-//         filled: true,
-//         border: OutlineInputBorder(
-//           borderSide: BorderSide.none,
-//           borderRadius: const BorderRadius.all(Radius.circular(10)),
-//         ),
-//         suffixIcon: InkWell(
-//           onTap: () {},
-//           child: Container(
-//             padding: EdgeInsets.all(defaultPadding * 0.75),
-//             margin: EdgeInsets.symmetric(horizontal: defaultPadding / 2),
-//             decoration: BoxDecoration(
-//               color: primaryColor,
-//               borderRadius: const BorderRadius.all(Radius.circular(10)),
-//             ),
-//             child: SvgPicture.asset("assets/icons/Search.svg"),
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-// }
+//complaints details
+class ComplaintDetails extends StatelessWidget {
+  const ComplaintDetails({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final Size _size = MediaQuery.of(context).size;
+    return Column(
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              "Complaints Detail",
+              style: TextStyle(
+                color: secondaryColor,
+              ),
+            ),
+            ElevatedButton.icon(
+              style: TextButton.styleFrom(
+                padding: EdgeInsets.symmetric(
+                  horizontal: defaultPadding,
+                  vertical:
+                      defaultPadding / (Responsive.isMobile(context) ? 2 : 1),
+                ),
+              ),
+              onPressed: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (_) => AddComplain()));
+              },
+              icon: Icon(Icons.add),
+              label: Text("Add Complain"),
+            ),
+          ],
+        ),
+        SizedBox(height: defaultPadding),
+        Responsive(
+          mobile: ComplaintsCardGridView(
+            crossAxisCount: _size.width < 650 ? 2 : 4,
+            childAspectRatio: _size.width < 650 ? 1.3 : 1,
+          ),
+          tablet: ComplaintsCardGridView(),
+          desktop: ComplaintsCardGridView(
+            childAspectRatio: _size.width < 1400 ? 1.1 : 1.4,
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class ComplaintsCardGridView extends StatelessWidget {
+  const ComplaintsCardGridView({
+    Key? key,
+    this.crossAxisCount = 4,
+    this.childAspectRatio = 1,
+  }) : super(key: key);
+
+  final int crossAxisCount;
+  final double childAspectRatio;
+
+  @override
+  Widget build(BuildContext context) {
+    return GridView.builder(
+      physics: NeverScrollableScrollPhysics(),
+      shrinkWrap: true,
+      itemCount: ComplaintsDetails.length,
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: crossAxisCount,
+        crossAxisSpacing: defaultPadding,
+        mainAxisSpacing: defaultPadding,
+        childAspectRatio: childAspectRatio,
+      ),
+      itemBuilder: (context, index) =>
+          ComplaintsInfoCard(info: ComplaintsDetails[index]),
+    );
+  }
+}
