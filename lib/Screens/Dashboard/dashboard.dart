@@ -25,10 +25,10 @@ class DashboardScreen extends StatelessWidget {
       ),
       body: Center(
         child: SingleChildScrollView(
-          padding: EdgeInsets.all(defaultPadding),
+          padding: EdgeInsets.all(kDefaultPadding),
           child: Column(
             children: [
-              SizedBox(height: defaultPadding),
+              SizedBox(height: kDefaultPadding),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -37,16 +37,16 @@ class DashboardScreen extends StatelessWidget {
                     child: Column(
                       children: [
                         ComplaintDetails(),
-                        SizedBox(height: defaultPadding),
+                        SizedBox(height: kDefaultPadding),
                         RecentComplaints(),
                         if (Responsive.isMobile(context))
-                          SizedBox(height: defaultPadding),
+                          SizedBox(height: kDefaultPadding),
                         if (Responsive.isMobile(context)) ComplaintsSummary(),
                       ],
                     ),
                   ),
                   if (!Responsive.isMobile(context))
-                    SizedBox(width: defaultPadding),
+                    SizedBox(width: kDefaultPadding),
                   // On Mobile means if the screen is less than 850 we dont want to show it
                   if (!Responsive.isMobile(context))
                     Expanded(
@@ -80,15 +80,15 @@ class ComplaintDetails extends StatelessWidget {
             Text(
               "Complaints Detail",
               style: TextStyle(
-                color: secondaryColor,
+                color: kSecondaryColor,
               ),
             ),
             ElevatedButton.icon(
               style: TextButton.styleFrom(
                 padding: EdgeInsets.symmetric(
-                  horizontal: defaultPadding,
+                  horizontal: kDefaultPadding,
                   vertical:
-                      defaultPadding / (Responsive.isMobile(context) ? 2 : 1),
+                      kDefaultPadding / (Responsive.isMobile(context) ? 2 : 1),
                 ),
               ),
               onPressed: () {
@@ -100,7 +100,7 @@ class ComplaintDetails extends StatelessWidget {
             ),
           ],
         ),
-        SizedBox(height: defaultPadding),
+        SizedBox(height: kDefaultPadding),
         Responsive(
           mobile: ComplaintsCardGridView(
             crossAxisCount: _size.width < 650 ? 2 : 4,
@@ -134,8 +134,8 @@ class ComplaintsCardGridView extends StatelessWidget {
       itemCount: ComplaintsDetails.length,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: crossAxisCount,
-        crossAxisSpacing: defaultPadding,
-        mainAxisSpacing: defaultPadding,
+        crossAxisSpacing: kDefaultPadding,
+        mainAxisSpacing: kDefaultPadding,
         childAspectRatio: childAspectRatio,
       ),
       itemBuilder: (context, index) =>

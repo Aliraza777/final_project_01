@@ -19,12 +19,12 @@ class ComplaintsSummaryCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: defaultPadding),
-      padding: EdgeInsets.all(defaultPadding),
+      margin: EdgeInsets.only(top: kDefaultPadding),
+      padding: EdgeInsets.all(kDefaultPadding),
       decoration: BoxDecoration(
-        border: Border.all(width: 2, color: primaryColor.withOpacity(0.15)),
+        border: Border.all(width: 2, color: kPrimaryColor.withOpacity(0.15)),
         borderRadius: const BorderRadius.all(
-          Radius.circular(defaultPadding),
+          Radius.circular(kDefaultPadding),
         ),
       ),
       child: Row(
@@ -39,13 +39,13 @@ class ComplaintsSummaryCard extends StatelessWidget {
           ),
           Expanded(
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
+              padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     title,
-                    style: TextStyle(color: secondaryColor),
+                    style: TextStyle(color: kSecondaryColor),
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                   ),
@@ -54,7 +54,7 @@ class ComplaintsSummaryCard extends StatelessWidget {
                     style: Theme.of(context)
                         .textTheme
                         .caption!
-                        .copyWith(color: secondaryColor),
+                        .copyWith(color: kSecondaryColor),
                   ),
                 ],
               ),

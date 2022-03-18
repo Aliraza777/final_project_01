@@ -25,18 +25,18 @@ class Chart extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(height: defaultPadding),
+                SizedBox(height: kDefaultPadding),
                 Text(
-                  "78",
-                  style: Theme.of(context).textTheme.headline4!.copyWith(
-                        color: secondaryColor,
-                        fontWeight: FontWeight.w600,
-                        height: 0.5,
-                      ),
+                  "8 completed",
+                  style: TextStyle(
+                    color: kSecondaryColor,
+                    fontWeight: FontWeight.w600,
+                    height: 0.5,
+                  ),
                 ),
                 Text(
-                  "of 114",
-                  style: TextStyle(color: secondaryColor),
+                  "of 119",
+                  style: TextStyle(color: kSecondaryColor),
                 )
               ],
             ),
@@ -48,12 +48,12 @@ class Chart extends StatelessWidget {
 }
 
 List<PieChartSectionData> paiChartSelectionDatas = [
-  PieChartSectionData(
-    color: primaryColor,
-    value: 25,
-    showTitle: false,
-    radius: 25,
-  ),
+  // PieChartSectionData(
+  //   color: kPrimaryColor,
+  //   value: 25,
+  //   showTitle: false,
+  //   radius: 25,
+  // ),
   PieChartSectionData(
     color: Colors.cyan,
     value: 20,
@@ -72,10 +72,11 @@ List<PieChartSectionData> paiChartSelectionDatas = [
     showTitle: false,
     radius: 16,
   ),
+  PieChartSectionData(color: Colors.red, value: 5, showTitle: false, radius: 8),
   PieChartSectionData(
-    color: primaryColor.withOpacity(0.1),
+    color: kPrimaryColor.withOpacity(0.1),
     value: 25,
     showTitle: false,
-    radius: 13,
+    radius: 10,
   ),
 ];

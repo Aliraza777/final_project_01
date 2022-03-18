@@ -15,9 +15,9 @@ class ComplaintsInfoCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(defaultPadding),
+      padding: EdgeInsets.all(kDefaultPadding),
       decoration: BoxDecoration(
-        color: secondaryColor,
+        color: kSecondaryColor,
         borderRadius: const BorderRadius.all(Radius.circular(10)),
       ),
       child: InkWell(
@@ -30,7 +30,7 @@ class ComplaintsInfoCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
-                  padding: EdgeInsets.all(defaultPadding * 0.75),
+                  padding: EdgeInsets.all(kDefaultPadding * 0.75),
                   height: 40,
                   width: 40,
                   decoration: BoxDecoration(

@@ -10,7 +10,7 @@ class RecentComplaints extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(defaultPadding),
+      padding: EdgeInsets.all(kDefaultPadding),
       decoration: BoxDecoration(
         color: Colors.blue[100],
         borderRadius: const BorderRadius.all(Radius.circular(10)),
@@ -21,7 +21,7 @@ class RecentComplaints extends StatelessWidget {
           Text(
             "Recent Complaints",
             style: TextStyle(
-              color: secondaryColor,
+              color: kSecondaryColor,
             ),
           ),
           SingleChildScrollView(
@@ -39,7 +39,7 @@ class RecentComplaints extends StatelessWidget {
             child: Text(
               "More Comaplints",
               style: TextStyle(
-                color: secondaryColor,
+                color: kSecondaryColor,
               ),
             ),
           ),

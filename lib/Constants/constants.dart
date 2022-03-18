@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
-const primaryColor = Colors.blue;
-const secondaryColor = Colors.blueGrey;
-const bgColor = Colors.white;
+const kPrimaryColor = Colors.blue;
+const kSecondaryColor = Colors.blueGrey;
+const kBgColor = Colors.white;
 
-const defaultPadding = 16.0;
+const kDefaultPadding = 16.0;
+
+const kSvg = "assets/icons/Documents.svg";

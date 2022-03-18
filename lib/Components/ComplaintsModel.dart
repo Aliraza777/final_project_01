@@ -1,8 +1,9 @@
+import 'package:final_project_01/Constants/constants.dart';
 import 'package:flutter/material.dart';
 
 class ComplaintsStorageInfo {
   final String? svgSrc, title;
-  final int? numOfFiles;
+  late final int? numOfFiles;
   final Color? color;
   final String value;
 
@@ -13,34 +14,42 @@ class ComplaintsStorageInfo {
     this.color,
     required this.value,
   });
+
+  set SetNumOfFiles(int? num) {
+    this.numOfFiles = num;
+  }
+
+  int? get getNumOfFiles {
+    return this.numOfFiles;
+  }
 }
 
 List ComplaintsDetails = [
   ComplaintsStorageInfo(
     title: "Rejected Complaints",
-    numOfFiles: 114,
-    svgSrc: "assets/icons/Documents.svg",
+    numOfFiles: 5,
+    svgSrc: kSvg,
     color: Colors.red,
     value: "total",
   ),
   ComplaintsStorageInfo(
     title: "Pending Complaints",
     numOfFiles: 28,
-    svgSrc: "assets/icons/Documents.svg",
+    svgSrc: kSvg,
     color: Color(0xFFFFA113),
     value: "pending",
   ),
   ComplaintsStorageInfo(
     title: "In progress Complaints",
     numOfFiles: 78,
-    svgSrc: "assets/icons/Documents.svg",
+    svgSrc: kSvg,
     color: Colors.cyan,
     value: "inprogress",
   ),
   ComplaintsStorageInfo(
     title: "Completed Compliants",
     numOfFiles: 8,
-    svgSrc: "assets/icons/Documents.svg",
+    svgSrc: kSvg,
     color: Colors.green,
     value: "complete",
   ),
