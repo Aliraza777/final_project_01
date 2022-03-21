@@ -1,4 +1,4 @@
-import 'package:final_project_01/Screens/Dashboard/dashboard.dart';
+import 'package:final_project_01/Screens/Manager_Screen/manager_screen.dart';
 import 'package:final_project_01/Utils/utils.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/cupertino.dart';
@@ -133,19 +133,6 @@ class _AddManagerState extends State<AddManager> {
                 ),
                 ElevatedButton(
                     onPressed: () async {
-                      // try {
-                      //   await database.child('manager/').set({
-                      //     'name': name,
-                      //     'email': email,
-                      //     'phone_no.': phoneNo,
-                      //     'service': value,
-                      //   });
-                      // } catch (e) {
-                      //   print("You got an error!");
-                      // }
-                      // Utils.showSnackBar("Complain Added");
-                      // Navigator.push(context,
-                      //     MaterialPageRoute(builder: (_) => DashboardScreen()));
                       add();
                     },
                     child: Text("Add Manager"))
@@ -168,13 +155,13 @@ class _AddManagerState extends State<AddManager> {
     final manager = _database.child('/managers');
     final isValid = formkey.currentState!.validate();
     if (!isValid) return;
-    showDialog(
-      context: context,
-      barrierDismissible: false,
-      builder: (context) => Center(
-        child: CircularProgressIndicator(),
-      ),
-    );
+    // showDialog(
+    //   context: context,
+    //   barrierDismissible: false,
+    //   builder: (context) => Center(
+    //     child: CircularProgressIndicator(),
+    //   ),
+    // );
     if (value == null) {
       Utils.showSnackBar("Kindly fill all the fields");
       Navigator.pop(context);
@@ -196,9 +183,8 @@ class _AddManagerState extends State<AddManager> {
       Utils.showSnackBar("Error occured");
       print("Error $e");
     }
-    Utils.showSnackBar("Complain Added");
+    Utils.showSnackBar("Manager Added");
     Navigator.pop(context);
-    Navigator.push(
-        context, MaterialPageRoute(builder: (_) => DashboardScreen()));
+    Navigator.push(context, MaterialPageRoute(builder: (_) => ShowManagers()));
   }
 }

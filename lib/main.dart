@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'Constants/constants.dart';
+import 'Screens/Add_Manager_Screen/addManagerScreen.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -25,8 +26,8 @@ class MyApp extends StatelessWidget {
         canvasColor: kSecondaryColor,
       ),
       home: Scaffold(
-        body: MainScreen(),
-        // body: AddManager(),
+        // body: MainScreen(),
+        body: AddManager(),
       ),
     );
   }
